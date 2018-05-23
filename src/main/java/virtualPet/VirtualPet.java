@@ -3,7 +3,7 @@ package virtualPet;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class VirtualPet {
-
+// instance variables
 	private String virtualPetName;
 	private int hunger;
 	private int thirst;
@@ -21,11 +21,11 @@ public class VirtualPet {
 		this.age = 0;
 	}
 
-	// Getter variables
+	// Getter and setter variables
 	public int getHunger() {
 		return this.hunger;
 	}
-	
+
 	public void setHunger(int hunger) {
 		this.hunger = hunger;
 	}
@@ -33,7 +33,7 @@ public class VirtualPet {
 	public int getThirst() {
 		return this.thirst;
 	}
-	
+
 	public void setThirst(int thirst) {
 		this.thirst = thirst;
 	}
@@ -41,7 +41,7 @@ public class VirtualPet {
 	public int getSleep() {
 		return this.tiredness;
 	}
-	
+
 	public void setSleep(int tiredness) {
 		this.tiredness = tiredness;
 	}
@@ -49,10 +49,15 @@ public class VirtualPet {
 	public int getPlay() {
 		return this.boredom;
 	}
-	
+
 	public void setPlay(int boredom) {
 		this.boredom = boredom;
 	}
+
+	// Tick method increments the age of of the animal as well as general health
+	// status such as hunger and thirst of the animal if the appropriate action does
+	// not take place while an activity is completed. It will
+	// eventually lead the animal to perish and the game will be over.
 
 	public void tick() {
 		this.hunger += 5;
@@ -114,13 +119,13 @@ public class VirtualPet {
 		System.out.println("Boredom before playing: " + this.getPlay());
 		this.boredom -= randomNum;
 		this.tick();
-		
+
 	}
-	
+
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 	public int getAge() {
 		return this.age;
 	}
@@ -132,13 +137,13 @@ public class VirtualPet {
 	public void setVirtualPetName(String virtualPetName) {
 		this.virtualPetName = virtualPetName;
 	}
-	
+
 	public boolean isAlive() {
-		if((this.hunger == 100)||(this.thirst == 100) || (this.age == 50.0)) {
-		return false;
-	}	else {
-		return true;
-	}
+		if ((this.hunger == 100) || (this.thirst == 100) || (this.age == 50.0)) {
+			return false;
+		} else {
+			return true;
+		}
 
 	}
 }
