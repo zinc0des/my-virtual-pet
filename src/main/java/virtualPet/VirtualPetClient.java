@@ -3,14 +3,22 @@ package virtualPet;
 import java.util.Scanner;
 
 public class VirtualPetClient {
-
+	/*
+	 * This virtual pet game allows the player to interact with Marty the Sloth in
+	 * various ways. A menu first pops us notifying the options on activities
+	 * available. Marty's hunger and/or thirst levels should not exceed 100. If it
+	 * does, Marty dies. The player can feed, make him drink water,play with him, as
+	 * well as put him to sleep. Marty's age will increment by 1 every time the
+	 * player chooses a new activity from the menu. If age exceeds 50, Marty will
+	 * die!
+	 * 
+	 */
 	public static void main(String[] args) {
 		VirtualPet myPet = new VirtualPet("Marty the Sloth");
+		Scanner input = new Scanner(System.in);
 		print("Welcome to the world of Marty the Sloth.");
 		while (myPet.isAlive()) {
 			print("What do you want to do?");
-			// print("Current Age of Marty the Sloth: " + myPet.getAge());
-			Scanner input = new Scanner(System.in);
 			int userInput = 0;
 			while ((userInput < 1) && (userInput < 5)) {
 				print("1: Feed Marty");
@@ -50,6 +58,7 @@ public class VirtualPetClient {
 		}
 		System.out.println("Bless the soul of poor Marty the Sloth!");
 		System.out.println("Thank you for playing!");
+		input.close();
 
 	}
 
