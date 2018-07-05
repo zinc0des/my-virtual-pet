@@ -17,6 +17,25 @@ public class VirtualPetClient {
 		VirtualPet myPet = new VirtualPet("Marty the Sloth");
 		Scanner input = new Scanner(System.in);
 		print("Welcome to the world of Marty the Sloth.");
+		System.out.println(" ________________________________");
+		System.out.println("(_______^^^____________^^^_______)");
+		System.out.println("      /  (((         / (((       ");
+		System.out.println("     / /  \\         / /  \\"  );
+		System.out.println("       \\   \\         \\   \\");
+		System.out.println("        \\   \\         \\   \\");
+		System.out.println("         \\   \\");
+		System.out.println("  ________\\   \\         \\   \\");
+		System.out.println(" /        \\\\   \\        \\   \\");
+		System.out.println("/((@))((@))\\\\   \\        \\   \\");
+		System.out.println("\\   (-)    / \\   \\        \\   \\");
+		System.out.println(" \\__\\-/___/ /    /         /   \\");
+		System.out.println(" /           \\__/          \\  |");
+		System.out.println("/                              /");
+		System.out.println("|                             /");
+		System.out.println(" \\                           /");
+		System.out.println("  \\                         /");
+		System.out.println("   \\                       /");
+		System.out.println("    \\_____________________/");
 		while (myPet.isAlive()) {
 			print("What do you want to do?");
 			int userInput = 0;
@@ -54,7 +73,7 @@ public class VirtualPetClient {
 				System.out.println("Please enter a valid option between 1 and 5");
 				break;
 			}
-
+			myPet.tick();
 		}
 		System.out.println("Bless the soul of poor Marty the Sloth!");
 		System.out.println("Thank you for playing!");

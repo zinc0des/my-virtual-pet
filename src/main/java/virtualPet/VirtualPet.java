@@ -83,7 +83,7 @@ public class VirtualPet {
 			System.out.println("Please allow me to sleep!");
 		}
 		if (this.getPlay() > 95 && this.getPlay() < 100) {
-			System.out.println("Marty is bored. Please play with him!");
+			System.out.println("I'm bored. Please play with me!");
 		}
 	}
 
@@ -97,29 +97,24 @@ public class VirtualPet {
 		int randomNum = ThreadLocalRandom.current().nextInt(1, this.getHunger());
 		System.out.println("Hunger before being Fed: " + this.getHunger());
 		this.hunger -= randomNum;
-		this.tick();
 	}
 
 	public void water() {
 		int randomNum = ThreadLocalRandom.current().nextInt(1, this.getThirst());
 		System.out.println("Thirst before drinking water: " + this.getThirst());
 		this.thirst -= randomNum;
-		this.tick();
 	}
 
 	public void makeSleep() {
 		int randomNum = ThreadLocalRandom.current().nextInt(1, this.getSleep());
 		System.out.println("Tiredness before a nap: " + this.getSleep());
 		this.tiredness -= randomNum;
-		this.tick();
 	}
 
 	public void playWith() {
 		int randomNum = ThreadLocalRandom.current().nextInt(1, this.getPlay());
 		System.out.println("Boredom before playing: " + this.getPlay());
 		this.boredom -= randomNum;
-		this.tick();
-
 	}
 
 	public void setAge(int age) {
@@ -139,11 +134,11 @@ public class VirtualPet {
 	}
 
 	public boolean isAlive() {
-		if ((this.hunger == 100) || (this.thirst == 100) || (this.age == 50.0)) {
+		if ((this.hunger >= 100) || (this.thirst >= 100) || (this.age >= 50)) {
 			return false;
 		} else {
 			return true;
-		}
+	}
 
 	}
 }

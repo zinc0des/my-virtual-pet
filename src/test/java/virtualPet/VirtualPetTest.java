@@ -9,6 +9,8 @@ import static org.junit.Assert.*;
 
 import org.junit.runners.JUnit4;
 
+import virtualPet.VirtualPet;
+
 
 /**
  * @author WeCanCodeIT
@@ -33,7 +35,7 @@ public class VirtualPetTest {
 	public void testSetThirst() throws Exception {
 		VirtualPet pet = new VirtualPet("Donkey");
 		pet.setThirst(85);
-		assertEquals(pet.getHunger(), 85);
+		assertEquals(pet.getThirst(), 85);
 	}
 
 	/**
@@ -81,12 +83,9 @@ public class VirtualPetTest {
 		assertTrue(pet.getThirst() < 10);
 	}
 
-	/**
-	 * Test method for {@link virtualPet.VirtualPet#makeSleep()}.
-	 */
 	@Test
 	public void testMakeSleep() throws Exception {
-		VirtualPet pet = new VirtualPet("Doogie");
+		VirtualPet pet = new VirtualPet("Dougie");
 		pet.setAge(10);
 		pet.setThirst(10);
 		pet.setHunger(10);
@@ -95,12 +94,10 @@ public class VirtualPetTest {
 		assertTrue(pet.getSleep() < 10);
 	}
 
-	/**
-	 * Test method for {@link virtualPet.VirtualPet#playWith()}.
-	 */
+	
 	@Test
 	public void testPlayWith() throws Exception {
-		VirtualPet pet = new VirtualPet("Doogie");
+		VirtualPet pet = new VirtualPet("Snoopy");
 		pet.setAge(10);
 		pet.setThirst(10);
 		pet.setHunger(10);
@@ -109,9 +106,6 @@ public class VirtualPetTest {
 		assertTrue(pet.getPlay() < 10);
 	}
 
-	/**
-	 * Test method for {@link virtualPet.VirtualPet#setAge(int)}.
-	 */
 	@Test
 	public void testSetAge() throws Exception {
 		VirtualPet pet = new VirtualPet("Yeti");
@@ -124,7 +118,7 @@ public class VirtualPetTest {
 	 */
 	@Test
 	public void testGetAge() throws Exception {
-		VirtualPet pet = new VirtualPet("Donkey");
+		VirtualPet pet = new VirtualPet("Tony");
 		assertTrue(pet.getAge() == 0);
 	}
 
@@ -133,8 +127,8 @@ public class VirtualPetTest {
 	 */
 	@Test
 	public void testGetVirtualPetName() throws Exception {
-		VirtualPet pet = new VirtualPet("Donkey");
-		assertEquals(pet.getVirtualPetName(), "Donkey");
+		VirtualPet pet = new VirtualPet("Yvonne");
+		assertEquals(pet.getVirtualPetName(), "Yvonne");
 	}
 
 	/**
@@ -142,7 +136,7 @@ public class VirtualPetTest {
 	 */
 	@Test
 	public void testSetVirtualPetName() throws Exception {
-		VirtualPet pet = new VirtualPet("Doogie");
+		VirtualPet pet = new VirtualPet("Ritchie");
 		pet.setVirtualPetName("Lori");
 		assertEquals(pet.getVirtualPetName(), "Lori");
 	}
@@ -152,7 +146,7 @@ public class VirtualPetTest {
 	 */
 	@Test
 	public void testIsAlive() throws Exception {
-		VirtualPet pet = new VirtualPet("Doogie");
+		VirtualPet pet = new VirtualPet("Marco");
 		pet.setAge(10);
 		pet.setHunger(10);
 		pet.setThirst(10);
